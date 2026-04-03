@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye World Marketing Brief 2026</title>
+    <style>
+        :root {
+            --teal: #0A9488;
+            --gold: #B8965A;
+            --dark: #04080F;
+            --valu: #E94E1B;
+            --we: #4F2D7F;
+            --machines: #1B6CA8;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f9f9f9; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--teal); padding-bottom: 15px; margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 1.5em; color: var(--dark); }
+        .toggle-btn { background: var(--teal); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 0.95em; flex-shrink: 0; }
+        .project-box { border: 1px solid #eee; padding: 20px; margin-bottom: 30px; border-radius: 10px; position: relative; }
+        .project-box h2 { margin-top: 0; color: var(--teal); font-size: 1.4em; }
+        .project-box p { margin: 0 0 10px; line-height: 1.7; }
+        .label { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; color: white; }
+        .lang-ar { display: none; direction: rtl; text-align: right; }
+        ul { padding-inline-start: 20px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
+        .section-intro { font-style: italic; color: #555; margin-bottom: 14px; }
+        .note { background: #fff8f0; border-left: 4px solid var(--gold); padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
+        .note-ar { background: #fff8f0; border-right: 4px solid var(--gold); border-left: none; padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
+
+        /* Team Feedback */
+        .team-section { margin-top: 22px; border-top: 2px dashed #e0e0e0; padding-top: 18px; }
+        .team-section-title { font-size: 0.85em; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+        .team-member { margin-bottom: 16px; }
+        .member-label { font-weight: bold; font-size: 0.9em; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+        .member-badge { display: inline-block; width: 28px; height: 28px; border-radius: 50%; color: white; font-size: 0.8em; font-weight: bold; text-align: center; line-height: 28px; flex-shrink: 0; }
+        .badge-bakr   { background: #0A9488; }
+        .badge-hadeer { background: #B8965A; }
+        .badge-asmaa  { background: #E94E1B; }
+        .member-textarea { width: 100%; min-height: 80px; padding: 10px 12px; border: 1.5px solid #ddd; border-radius: 8px; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 0.9em; resize: vertical; transition: border-color 0.2s; line-height: 1.6; color: #333; }
+        .member-textarea:focus { outline: none; border-color: var(--teal); }
+        .submit-row { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+        .submit-btn { background: var(--teal); color: white; border: none; padding: 7px 18px; border-radius: 20px; cursor: pointer; font-size: 0.85em; font-weight: bold; transition: background 0.2s; }
+        .submit-btn:hover { background: #077a70; }
+        .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+        .status-msg { font-size: 0.82em; color: #555; }
+        .status-msg.success { color: #0A9488; font-weight: bold; }
+        .status-msg.error   { color: #c0392b; font-weight: bold; }
+
+        /* Machines table */
+        .machines-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; }
+        .machines-table th { background: var(--machines); color: white; padding: 8px 10px; text-align: left; }
+        .machines-table td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+        .machines-table tr:hover td { background: #f0f8ff; }
+        .service-tag { display: inline-block; background: #e8f4fd; color: var(--machines); border-radius: 4px; padding: 2px 7px; font-size: 0.82em; margin: 2px 2px 2px 0; }
+        .lang-ar .machines-table th { text-align: right; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1 class="lang-en">Projects Brief Summary</h1>
+        <h1 class="lang-ar" style="display:none;">ملخص مشاريع الحملات</h1>
+        <button class="toggle-btn" onclick="toggleLang()">AR / EN</button>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <div class="project-box" style="border-right: 5px solid var(--valu);">
+        <div class="label" style="background: var(--valu);">ValU Partnership</div>
+        <div class="lang-en">
+            <h2>1. Triple Zero Campaign</h2>
+            <p class="section-intro">A financial empowerment initiative designed to make high-end medical care accessible through a strategic partnership with ValU.</p>
+            <ul>
+                <li><strong>The Core Offer:</strong> 0% Down payment, 0% Interest, and 0% Administrative fees.</li>
+                <li><strong>Installment Flexibility:</strong> Patients can choose to spread payments over 6, 12, or 24 months.</li>
+                <li><strong>Scope of Service:</strong> Valid for all medical services provided by the group.</li>
+                <li><strong>Geographic Focus:</strong> Targeted specifically at patients across Cairo and Giza.</li>
+                <li><strong>Campaign Rule:</strong> Cannot be combined with any other discounts or price-reduction promotions.</li>
+            </ul>
+            <div class="note">&#9201; <strong>Duration:</strong> Positioned as a "limited time" offer spanning 3 months.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>1. حملة Triple Zero (شراكة فاليو)</h2>
+            <p class="section-intro">مبادرة تمكين مالي تهدف إلى جعل الرعاية الطبية الراقية في متناول الجميع من خلال شراكة استراتيجية مع ValU.</p>
+            <ul>
+                <li><strong>العرض الأساسي:</strong> 0% مقدم، 0% فوائد، 0% مصاريف إدارية.</li>
+                <li><strong>مرونة التقسيط:</strong> يمكن للمرضى الاختيار بين 6 أو 12 أو 24 شهرًا.</li>
+                <li><strong>نطاق الخدمة:</strong> العرض سارٍ على جميع الخدمات الطبية المقدمة من المجموعة.</li>
+                <li><strong>النطاق الجغرافي:</strong> موجّه لمرضى القاهرة والجيزة تحديدًا.</li>
+                <li><strong>شرط الحملة:</strong> لا يمكن دمج هذا العرض مع أي خصومات أو تخفيضات أخرى.</li>
+            </ul>
+            <div class="note-ar">&#9201; <strong>المدة:</strong> عرض لفترة محدودة لمدة 3 أشهر.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p1-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p1-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p1-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p1-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p1-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p1-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-box" style="border-right: 5px solid var(--gold);">
+        <div class="label" style="background: var(--gold);">Top Care Premium</div>
+        <div class="lang-en">
+            <h2>2. Beauty &amp; Dental Voucher</h2>
+            <p class="section-intro">An initiative focused on the "Top Care" premium unit, utilizing a "Professor-Led Integrated Hub" concept to cross-promote luxury services.</p>
+            <ul>
+                <li><strong>Promotional Mechanism:</strong> Patients who book a premium eye procedure receive a free consultation voucher for either the Dental or Dermatology (Beauty) departments.</li>
+                <li><strong>Strategic Objective:</strong> Aims to solve the "fragmented patient journey" by integrating premium ophthalmology, dermatology, and dentistry under one luxury roof.</li>
+                <li><strong>Target Audience:</strong> Designed for Class A patients and medical tourists seeking a boutique, high-end experience.</li>
+                <li><strong>Premium Benefits:</strong> VIP experience including a private entrance and a 10-minute maximum waiting time guarantee.</li>
+                <li><strong>Positioning:</strong> Marketed as "Egypt's First Professor-Led Luxury Medical Hub," leveraging the academic authority of Professor Ihab Saad Othman.</li>
+            </ul>
+        </div>
+        <div class="lang-ar">
+            <h2>2. عرض الـ Voucher (تجميل وأسنان)</h2>
+            <p class="section-intro">مبادرة تركّز على وحدة "Top Care" الفاخرة، وتستخدم مفهوم "المركز المتكامل بقيادة أستاذ جامعي" للترويج المتقاطع للخدمات الراقية.</p>
+            <ul>
+                <li><strong>آلية العرض:</strong> المرضى الذين يحجزون عملية عيون فاخرة يحصلون على كوبون كشف مجاني في قسم الأسنان أو الجلدية (التجميل).</li>
+                <li><strong>الهدف الاستراتيجي:</strong> حل مشكلة "رحلة المريض المجزأة" من خلال دمج طب العيون والجلدية والأسنان الراقية تحت سقف واحد.</li>
+                <li><strong>الفئة المستهدفة:</strong> مرضى الفئة A والسياح العلاجيين الباحثين عن تجربة فاخرة ومتميزة.</li>
+                <li><strong>المزايا الفاخرة:</strong> تجربة VIP تشمل مدخلًا خاصًا وضمان الانتظار لمدة لا تتجاوز 10 دقائق.</li>
+                <li><strong>التموضع التسويقي:</strong> يُسوَّق باعتباره "أول مركز طبي فاخر بقيادة أستاذ جامعي في مصر"، مستفيدًا من مكانة الأستاذ الدكتور إيهاب سعد عثمان.</li>
+            </ul>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p2-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p2-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p2-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p2-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p2-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p2-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-box" style="border-right: 5px solid var(--dark);">
+        <div class="label" style="background: var(--dark);">Reception Screen</div>
+        <div class="lang-en">
+            <h2>3. 90-Minute Silent Video Loop</h2>
+            <ul>
+                <li><strong>Informational &amp; Promotional Content:</strong> Advertising for Donia Al Oyoun and Top Care, covering our services, medical awareness messages, and patient-related information.</li>
+                <li><strong>Patient Engagement Content:</strong> Suitable material for waiting patients, such as segments of silent movies, National Geographic clips, and similar content.</li>
+            </ul>
+            <div class="note">&#128263; All displayed content must be <strong>silent</strong>, with a total duration of approximately <strong>90 minutes</strong>.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>3. فيديو شاشات الاستقبال (90 دقيقة)</h2>
+            <ul>
+                <li><strong>محتوى إعلامي وترويجي:</strong> إعلانات لـ دنيا العيون و Top Care، تشمل الخدمات المقدمة، رسائل التوعية الطبية، والمعلومات الخاصة بالمرضى.</li>
+                <li><strong>محتوى تفاعلي للمرضى:</strong> مواد مناسبة لصالة الانتظار، مثل مقاطع من أفلام صامتة، ومقاطع ناشيونال جيوغرافيك، وما شابه ذلك.</li>
+            </ul>
+            <div class="note-ar">&#128263; يجب أن يكون جميع المحتوى المعروض <strong>بدون صوت</strong>، بمدة إجمالية تبلغ حوالي <strong>90 دقيقة</strong>.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p3-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p3-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p3-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p3-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p3-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p3-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-box" style="border-right: 5px solid var(--we);">
+        <div class="label" style="background: var(--we);">WE Offer</div>
+        <div class="lang-en">
+            <h2>4. Telecom Egypt (WE) Employees Offer</h2>
+            <p class="section-intro">A special dental offer exclusively for employees of Telecom Egypt (WE), effective from Saturday, April 4, 2026.</p>
+            <ul>
+                <li><strong>Dental Consultation:</strong> Fixed at 200 EGP for all employees.</li>
+                <li><strong>Other Procedures:</strong> 30% discount for children and 20% discount for adults.</li>
+                <li><strong>Validity:</strong> The offer is active until further notice.</li>
+            </ul>
+        </div>
+        <div class="lang-ar">
+            <h2>4. عرض موظفي المصرية للاتصالات (WE)</h2>
+            <p class="section-intro">ابتداءً من يوم السبت 4-4-2026، عرض خاص على خدمات الأسنان للسادة العاملين بشركة المصرية للاتصالات.</p>
+            <ul>
+                <li><strong>الكشف:</strong> 200 جنيه لجميع الموظفين.</li>
+                <li><strong>الإجراءات الأخرى:</strong> خصم 30% للأطفال و 20% للراشدين.</li>
+                <li><strong>السريان:</strong> العرض ساري حتى إشعار آخر.</li>
+            </ul>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p4-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p4-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p4-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p4-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p4-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p4-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-box" style="border-right: 5px solid var(--machines);">
+        <div class="label" style="background: var(--machines);">Aesthetic &amp; Medical Devices</div>
+        <div class="lang-en">
+            <h2>5. High-Revenue Aesthetic Services Campaign</h2>
+            <p class="section-intro">A targeted advertising campaign to promote the clinic's premium aesthetic machines and the high-demand services they deliver — prioritizing treatments with the fastest and highest cash return.</p>
+            <table class="machines-table">
+                <thead>
+                    <tr><th>#</th><th>Machine</th><th>Services to Advertise</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Cryolipolysis System</strong></td><td><span class="service-tag">Fat Freezing</span><span class="service-tag">Body Sculpting</span><span class="service-tag">Non-surgical Slimming</span></td></tr>
+                    <tr><td>2</td><td><strong>MeDioStar Diode Laser</strong></td><td><span class="service-tag">Laser Hair Removal</span><span class="service-tag">Full Body Sessions</span><span class="service-tag">Brazilian / Bikini</span></td></tr>
+                    <tr><td>3</td><td><strong>DEKA SmartXide CO2 Laser</strong></td><td><span class="service-tag">Skin Resurfacing</span><span class="service-tag">Acne Scar Treatment</span><span class="service-tag">Anti-Aging Laser</span></td></tr>
+                    <tr><td>4</td><td><strong>Vivace Microneedling RF</strong></td><td><span class="service-tag">Skin Tightening</span><span class="service-tag">Face Lifting (RF)</span><span class="service-tag">Pore Minimizing</span></td></tr>
+                    <tr><td>5</td><td><strong>HydraFacial Platform</strong></td><td><span class="service-tag">HydraFacial Session</span><span class="service-tag">Deep Cleansing</span><span class="service-tag">Glow &amp; Hydration</span></td></tr>
+                    <tr><td>6</td><td><strong>Zimmer Z Wave</strong></td><td><span class="service-tag">Cellulite Reduction</span><span class="service-tag">Body Contouring</span><span class="service-tag">Skin Firming</span></td></tr>
+                    <tr><td>7</td><td><strong>EZ Injector / Mesotherapy Gun</strong></td><td><span class="service-tag">Mesotherapy</span><span class="service-tag">Skin Boosters</span><span class="service-tag">Hair Loss Treatment</span></td></tr>
+                    <tr><td>8</td><td><strong>Draining PPC Support Unit</strong></td><td><span class="service-tag">Fat-Dissolving Injections</span><span class="service-tag">Body Drainage</span><span class="service-tag">Post-lipo Support</span></td></tr>
+                    <tr><td>9</td><td><strong>Waldmann Phototherapy Cabin</strong></td><td><span class="service-tag">Full-body UV Therapy</span><span class="service-tag">Psoriasis Treatment</span><span class="service-tag">Vitiligo Sessions</span></td></tr>
+                    <tr><td>10</td><td><strong>Kernel KN-4000 Phototherapy</strong></td><td><span class="service-tag">Localized UV Treatment</span><span class="service-tag">Targeted Skin Therapy</span></td></tr>
+                    <tr><td>11</td><td><strong>Z Wave Radial Pulse</strong></td><td><span class="service-tag">Radial Pulse Therapy</span><span class="service-tag">Stretch Mark Reduction</span></td></tr>
+                </tbody>
+            </table>
+            <div class="note" style="margin-top:14px;">&#128176; <strong>Campaign Priority:</strong> Lead with Laser Hair Removal, HydraFacial, and Fat Freezing — highest demand, fastest booking-to-cash cycle.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>5. حملة الخدمات التجميلية عالية العائد</h2>
+            <p class="section-intro">حملة إعلانية موجّهة للترويج لأجهزة التجميل الفاخرة في العيادة والخدمات التي تحقق أعلى عائد مالي وأسرع دورة حجز.</p>
+            <table class="machines-table">
+                <thead>
+                    <tr><th>#</th><th>الجهاز</th><th>الخدمات المُعلَن عنها</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>جهاز تجميد الدهون (Cryolipolysis)</strong></td><td><span class="service-tag">تجميد الدهون</span><span class="service-tag">نحت الجسم</span><span class="service-tag">تخسيس بدون جراحة</span></td></tr>
+                    <tr><td>2</td><td><strong>ليزر ديودي MeDioStar</strong></td><td><span class="service-tag">إزالة الشعر بالليزر</span><span class="service-tag">جلسات الجسم الكامل</span><span class="service-tag">مناطق حساسة</span></td></tr>
+                    <tr><td>3</td><td><strong>ليزر CO2 ديكا SmartXide</strong></td><td><span class="service-tag">تجديد سطح الجلد</span><span class="service-tag">علاج آثار الحبوب</span><span class="service-tag">ليزر مكافحة الشيخوخة</span></td></tr>
+                    <tr><td>4</td><td><strong>Vivace ميكرونيدلينج RF</strong></td><td><span class="service-tag">شد الجلد</span><span class="service-tag">رفع الوجه بالراديو فريكونسي</span><span class="service-tag">تصغير المسام</span></td></tr>
+                    <tr><td>5</td><td><strong>جهاز HydraFacial</strong></td><td><span class="service-tag">جلسة هيدرافيشيال</span><span class="service-tag">تنظيف عميق</span><span class="service-tag">ترطيب وإشراقة</span></td></tr>
+                    <tr><td>6</td><td><strong>Zimmer Z Wave</strong></td><td><span class="service-tag">تقليل السيلوليت</span><span class="service-tag">نحت الجسم</span><span class="service-tag">شد الجلد</span></td></tr>
+                    <tr><td>7</td><td><strong>جهاز الميزوثيرابي EZ Injector</strong></td><td><span class="service-tag">ميزوثيرابي</span><span class="service-tag">حقن ترطيب الجلد</span><span class="service-tag">علاج تساقط الشعر</span></td></tr>
+                    <tr><td>8</td><td><strong>وحدة PPC لإذابة الدهون</strong></td><td><span class="service-tag">حقن إذابة الدهون</span><span class="service-tag">تصريف الجسم</span><span class="service-tag">دعم ما بعد الشفط</span></td></tr>
+                    <tr><td>9</td><td><strong>كابينة الضوء العلاجي Waldmann</strong></td><td><span class="service-tag">علاج الصدفية</span><span class="service-tag">علاج البهاق</span><span class="service-tag">جلسات UV كامل الجسم</span></td></tr>
+                    <tr><td>10</td><td><strong>جهاز Kernel KN-4000</strong></td><td><span class="service-tag">علاج موضعي بالأشعة</span><span class="service-tag">جلسات جلدية مستهدفة</span></td></tr>
+                    <tr><td>11</td><td><strong>Z Wave نبضات شعاعية</strong></td><td><span class="service-tag">علاج علامات التمدد</span><span class="service-tag">نبضات شعاعية علاجية</span></td></tr>
+                </tbody>
+            </table>
+            <div class="note-ar" style="margin-top:14px;">&#128176; <strong>أولوية الحملة:</strong> البدء بالإعلان عن إزالة الشعر بالليزر، هيدرافيشيال، وتجميد الدهون — الأعلى طلبًا والأسرع في تحويل الحجز إلى إيراد.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p5-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p5-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p5-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p5-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p5-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p5-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .container -->
+
+<script>
+    const SHEET_URL = "<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye World Marketing Brief 2026</title>
+    <style>
+        :root {
+            --teal: #0A9488;
+            --gold: #B8965A;
+            --dark: #04080F;
+            --valu: #E94E1B;
+            --we: #4F2D7F;
+            --machines: #1B6CA8;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f9f9f9; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--teal); padding-bottom: 15px; margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 1.5em; color: var(--dark); }
+        .toggle-btn { background: var(--teal); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 0.95em; flex-shrink: 0; }
+        .project-box { border: 1px solid #eee; padding: 20px; margin-bottom: 30px; border-radius: 10px; position: relative; }
+        .project-box h2 { margin-top: 0; color: var(--teal); font-size: 1.4em; }
+        .project-box p { margin: 0 0 10px; line-height: 1.7; }
+        .label { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; color: white; }
+        .lang-ar { display: none; direction: rtl; text-align: right; }
+        ul { padding-inline-start: 20px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
+        .section-intro { font-style: italic; color: #555; margin-bottom: 14px; }
+        .note { background: #fff8f0; border-left: 4px solid var(--gold); padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
+        .note-ar { background: #fff8f0; border-right: 4px solid var(--gold); border-left: none; padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
+
+        /* Team Feedback */
+        .team-section { margin-top: 22px; border-top: 2px dashed #e0e0e0; padding-top: 18px; }
+        .team-section-title { font-size: 0.85em; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+        .team-member { margin-bottom: 16px; }
+        .member-label { font-weight: bold; font-size: 0.9em; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+        .member-badge { display: inline-block; width: 28px; height: 28px; border-radius: 50%; color: white; font-size: 0.8em; font-weight: bold; text-align: center; line-height: 28px; flex-shrink: 0; }
+        .badge-bakr   { background: #0A9488; }
+        .badge-hadeer { background: #B8965A; }
+        .badge-asmaa  { background: #E94E1B; }
+        .member-textarea { width: 100%; min-height: 80px; padding: 10px 12px; border: 1.5px solid #ddd; border-radius: 8px; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 0.9em; resize: vertical; transition: border-color 0.2s; line-height: 1.6; color: #333; }
+        .member-textarea:focus { outline: none; border-color: var(--teal); }
+        .submit-row { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+        .submit-btn { background: var(--teal); color: white; border: none; padding: 7px 18px; border-radius: 20px; cursor: pointer; font-size: 0.85em; font-weight: bold; transition: background 0.2s; }
+        .submit-btn:hover { background: #077a70; }
+        .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+        .status-msg { font-size: 0.82em; color: #555; }
+        .status-msg.success { color: #0A9488; font-weight: bold; }
+        .status-msg.error   { color: #c0392b; font-weight: bold; }
+
+        /* Machines table */
+        .machines-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; }
+        .machines-table th { background: var(--machines); color: white; padding: 8px 10px; text-align: left; }
+        .machines-table td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+        .machines-table tr:hover td { background: #f0f8ff; }
+        .service-tag { display: inline-block; background: #e8f4fd; color: var(--machines); border-radius: 4px; padding: 2px 7px; font-size: 0.82em; margin: 2px 2px 2px 0; }
+        .lang-ar .machines-table th { text-align: right; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1 class="lang-en">Projects Brief Summary</h1>
+        <h1 class="lang-ar" style="display:none;">ملخص مشاريع الحملات</h1>
+        <button class="toggle-btn" onclick="toggleLang()">AR / EN</button>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <div class="project-box" style="border-right: 5px solid var(--valu);">
+        <div class="label" style="background: var(--valu);">ValU Partnership</div>
+        <div class="lang-en">
+            <h2>1. Triple Zero Campaign</h2>
+            <p class="section-intro">A financial empowerment initiative designed to make high-end medical care accessible through a strategic partnership with ValU.</p>
+            <ul>
+                <li><strong>The Core Offer:</strong> 0% Down payment, 0% Interest, and 0% Administrative fees.</li>
+                <li><strong>Installment Flexibility:</strong> Patients can choose to spread payments over 6, 12, or 24 months.</li>
+                <li><strong>Scope of Service:</strong> Valid for all medical services provided by the group.</li>
+                <li><strong>Geographic Focus:</strong> Targeted specifically at patients across Cairo and Giza.</li>
+                <li><strong>Campaign Rule:</strong> Cannot be combined with any other discounts or price-reduction promotions.</li>
+            </ul>
+            <div class="note">&#9201; <strong>Duration:</strong> Positioned as a "limited time" offer spanning 3 months.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>1. حملة Triple Zero (شراكة فاليو)</h2>
+            <p class="section-intro">مبادرة تمكين مالي تهدف إلى جعل الرعاية الطبية الراقية في متناول الجميع من خلال شراكة استراتيجية مع ValU.</p>
+            <ul>
+                <li><strong>العرض الأساسي:</strong> 0% مقدم، 0% فوائد، 0% مصاريف إدارية.</li>
+                <li><strong>مرونة التقسيط:</strong> يمكن للمرضى الاختيار بين 6 أو 12 أو 24 شهرًا.</li>
+                <li><strong>نطاق الخدمة:</strong> العرض سارٍ على جميع الخدمات الطبية المقدمة من المجموعة.</li>
+                <li><strong>النطاق الجغرافي:</strong> موجّه لمرضى القاهرة والجيزة تحديدًا.</li>
+                <li><strong>شرط الحملة:</strong> لا يمكن دمج هذا العرض مع أي خصومات أو تخفيضات أخرى.</li>
+            </ul>
+            <div class="note-ar">&#9201; <strong>المدة:</strong> عرض لفترة محدودة لمدة 3 أشهر.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p1-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p1-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p1-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p1-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p1-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p1','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p1-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-box" style="border-right: 5px solid var(--gold);">
+        <div class="label" style="background: var(--gold);">Top Care Premium</div>
+        <div class="lang-en">
+            <h2>2. Beauty &amp; Dental Voucher</h2>
+            <p class="section-intro">An initiative focused on the "Top Care" premium unit, utilizing a "Professor-Led Integrated Hub" concept to cross-promote luxury services.</p>
+            <ul>
+                <li><strong>Promotional Mechanism:</strong> Patients who book a premium eye procedure receive a free consultation voucher for either the Dental or Dermatology (Beauty) departments.</li>
+                <li><strong>Strategic Objective:</strong> Aims to solve the "fragmented patient journey" by integrating premium ophthalmology, dermatology, and dentistry under one luxury roof.</li>
+                <li><strong>Target Audience:</strong> Designed for Class A patients and medical tourists seeking a boutique, high-end experience.</li>
+                <li><strong>Premium Benefits:</strong> VIP experience including a private entrance and a 10-minute maximum waiting time guarantee.</li>
+                <li><strong>Positioning:</strong> Marketed as "Egypt's First Professor-Led Luxury Medical Hub," leveraging the academic authority of Professor Ihab Saad Othman.</li>
+            </ul>
+        </div>
+        <div class="lang-ar">
+            <h2>2. عرض الـ Voucher (تجميل وأسنان)</h2>
+            <p class="section-intro">مبادرة تركّز على وحدة "Top Care" الفاخرة، وتستخدم مفهوم "المركز المتكامل بقيادة أستاذ جامعي" للترويج المتقاطع للخدمات الراقية.</p>
+            <ul>
+                <li><strong>آلية العرض:</strong> المرضى الذين يحجزون عملية عيون فاخرة يحصلون على كوبون كشف مجاني في قسم الأسنان أو الجلدية (التجميل).</li>
+                <li><strong>الهدف الاستراتيجي:</strong> حل مشكلة "رحلة المريض المجزأة" من خلال دمج طب العيون والجلدية والأسنان الراقية تحت سقف واحد.</li>
+                <li><strong>الفئة المستهدفة:</strong> مرضى الفئة A والسياح العلاجيين الباحثين عن تجربة فاخرة ومتميزة.</li>
+                <li><strong>المزايا الفاخرة:</strong> تجربة VIP تشمل مدخلًا خاصًا وضمان الانتظار لمدة لا تتجاوز 10 دقائق.</li>
+                <li><strong>التموضع التسويقي:</strong> يُسوَّق باعتباره "أول مركز طبي فاخر بقيادة أستاذ جامعي في مصر"، مستفيدًا من مكانة الأستاذ الدكتور إيهاب سعد عثمان.</li>
+            </ul>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p2-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p2-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p2-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p2-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p2-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p2','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p2-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-box" style="border-right: 5px solid var(--dark);">
+        <div class="label" style="background: var(--dark);">Reception Screen</div>
+        <div class="lang-en">
+            <h2>3. 90-Minute Silent Video Loop</h2>
+            <ul>
+                <li><strong>Informational &amp; Promotional Content:</strong> Advertising for Donia Al Oyoun and Top Care, covering our services, medical awareness messages, and patient-related information.</li>
+                <li><strong>Patient Engagement Content:</strong> Suitable material for waiting patients, such as segments of silent movies, National Geographic clips, and similar content.</li>
+            </ul>
+            <div class="note">&#128263; All displayed content must be <strong>silent</strong>, with a total duration of approximately <strong>90 minutes</strong>.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>3. فيديو شاشات الاستقبال (90 دقيقة)</h2>
+            <ul>
+                <li><strong>محتوى إعلامي وترويجي:</strong> إعلانات لـ دنيا العيون و Top Care، تشمل الخدمات المقدمة، رسائل التوعية الطبية، والمعلومات الخاصة بالمرضى.</li>
+                <li><strong>محتوى تفاعلي للمرضى:</strong> مواد مناسبة لصالة الانتظار، مثل مقاطع من أفلام صامتة، ومقاطع ناشيونال جيوغرافيك، وما شابه ذلك.</li>
+            </ul>
+            <div class="note-ar">&#128263; يجب أن يكون جميع المحتوى المعروض <strong>بدون صوت</strong>، بمدة إجمالية تبلغ حوالي <strong>90 دقيقة</strong>.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p3-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p3-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p3-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p3-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p3-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p3','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p3-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-box" style="border-right: 5px solid var(--we);">
+        <div class="label" style="background: var(--we);">WE Offer</div>
+        <div class="lang-en">
+            <h2>4. Telecom Egypt (WE) Employees Offer</h2>
+            <p class="section-intro">A special dental offer exclusively for employees of Telecom Egypt (WE), effective from Saturday, April 4, 2026.</p>
+            <ul>
+                <li><strong>Dental Consultation:</strong> Fixed at 200 EGP for all employees.</li>
+                <li><strong>Other Procedures:</strong> 30% discount for children and 20% discount for adults.</li>
+                <li><strong>Validity:</strong> The offer is active until further notice.</li>
+            </ul>
+        </div>
+        <div class="lang-ar">
+            <h2>4. عرض موظفي المصرية للاتصالات (WE)</h2>
+            <p class="section-intro">ابتداءً من يوم السبت 4-4-2026، عرض خاص على خدمات الأسنان للسادة العاملين بشركة المصرية للاتصالات.</p>
+            <ul>
+                <li><strong>الكشف:</strong> 200 جنيه لجميع الموظفين.</li>
+                <li><strong>الإجراءات الأخرى:</strong> خصم 30% للأطفال و 20% للراشدين.</li>
+                <li><strong>السريان:</strong> العرض ساري حتى إشعار آخر.</li>
+            </ul>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p4-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p4-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p4-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p4-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p4-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p4','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p4-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-box" style="border-right: 5px solid var(--machines);">
+        <div class="label" style="background: var(--machines);">Aesthetic &amp; Medical Devices</div>
+        <div class="lang-en">
+            <h2>5. High-Revenue Aesthetic Services Campaign</h2>
+            <p class="section-intro">A targeted advertising campaign to promote the clinic's premium aesthetic machines and the high-demand services they deliver — prioritizing treatments with the fastest and highest cash return.</p>
+            <table class="machines-table">
+                <thead>
+                    <tr><th>#</th><th>Machine</th><th>Services to Advertise</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Cryolipolysis System</strong></td><td><span class="service-tag">Fat Freezing</span><span class="service-tag">Body Sculpting</span><span class="service-tag">Non-surgical Slimming</span></td></tr>
+                    <tr><td>2</td><td><strong>MeDioStar Diode Laser</strong></td><td><span class="service-tag">Laser Hair Removal</span><span class="service-tag">Full Body Sessions</span><span class="service-tag">Brazilian / Bikini</span></td></tr>
+                    <tr><td>3</td><td><strong>DEKA SmartXide CO2 Laser</strong></td><td><span class="service-tag">Skin Resurfacing</span><span class="service-tag">Acne Scar Treatment</span><span class="service-tag">Anti-Aging Laser</span></td></tr>
+                    <tr><td>4</td><td><strong>Vivace Microneedling RF</strong></td><td><span class="service-tag">Skin Tightening</span><span class="service-tag">Face Lifting (RF)</span><span class="service-tag">Pore Minimizing</span></td></tr>
+                    <tr><td>5</td><td><strong>HydraFacial Platform</strong></td><td><span class="service-tag">HydraFacial Session</span><span class="service-tag">Deep Cleansing</span><span class="service-tag">Glow &amp; Hydration</span></td></tr>
+                    <tr><td>6</td><td><strong>Zimmer Z Wave</strong></td><td><span class="service-tag">Cellulite Reduction</span><span class="service-tag">Body Contouring</span><span class="service-tag">Skin Firming</span></td></tr>
+                    <tr><td>7</td><td><strong>EZ Injector / Mesotherapy Gun</strong></td><td><span class="service-tag">Mesotherapy</span><span class="service-tag">Skin Boosters</span><span class="service-tag">Hair Loss Treatment</span></td></tr>
+                    <tr><td>8</td><td><strong>Draining PPC Support Unit</strong></td><td><span class="service-tag">Fat-Dissolving Injections</span><span class="service-tag">Body Drainage</span><span class="service-tag">Post-lipo Support</span></td></tr>
+                    <tr><td>9</td><td><strong>Waldmann Phototherapy Cabin</strong></td><td><span class="service-tag">Full-body UV Therapy</span><span class="service-tag">Psoriasis Treatment</span><span class="service-tag">Vitiligo Sessions</span></td></tr>
+                    <tr><td>10</td><td><strong>Kernel KN-4000 Phototherapy</strong></td><td><span class="service-tag">Localized UV Treatment</span><span class="service-tag">Targeted Skin Therapy</span></td></tr>
+                    <tr><td>11</td><td><strong>Z Wave Radial Pulse</strong></td><td><span class="service-tag">Radial Pulse Therapy</span><span class="service-tag">Stretch Mark Reduction</span></td></tr>
+                </tbody>
+            </table>
+            <div class="note" style="margin-top:14px;">&#128176; <strong>Campaign Priority:</strong> Lead with Laser Hair Removal, HydraFacial, and Fat Freezing — highest demand, fastest booking-to-cash cycle.</div>
+        </div>
+        <div class="lang-ar">
+            <h2>5. حملة الخدمات التجميلية عالية العائد</h2>
+            <p class="section-intro">حملة إعلانية موجّهة للترويج لأجهزة التجميل الفاخرة في العيادة والخدمات التي تحقق أعلى عائد مالي وأسرع دورة حجز.</p>
+            <table class="machines-table">
+                <thead>
+                    <tr><th>#</th><th>الجهاز</th><th>الخدمات المُعلَن عنها</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>جهاز تجميد الدهون (Cryolipolysis)</strong></td><td><span class="service-tag">تجميد الدهون</span><span class="service-tag">نحت الجسم</span><span class="service-tag">تخسيس بدون جراحة</span></td></tr>
+                    <tr><td>2</td><td><strong>ليزر ديودي MeDioStar</strong></td><td><span class="service-tag">إزالة الشعر بالليزر</span><span class="service-tag">جلسات الجسم الكامل</span><span class="service-tag">مناطق حساسة</span></td></tr>
+                    <tr><td>3</td><td><strong>ليزر CO2 ديكا SmartXide</strong></td><td><span class="service-tag">تجديد سطح الجلد</span><span class="service-tag">علاج آثار الحبوب</span><span class="service-tag">ليزر مكافحة الشيخوخة</span></td></tr>
+                    <tr><td>4</td><td><strong>Vivace ميكرونيدلينج RF</strong></td><td><span class="service-tag">شد الجلد</span><span class="service-tag">رفع الوجه بالراديو فريكونسي</span><span class="service-tag">تصغير المسام</span></td></tr>
+                    <tr><td>5</td><td><strong>جهاز HydraFacial</strong></td><td><span class="service-tag">جلسة هيدرافيشيال</span><span class="service-tag">تنظيف عميق</span><span class="service-tag">ترطيب وإشراقة</span></td></tr>
+                    <tr><td>6</td><td><strong>Zimmer Z Wave</strong></td><td><span class="service-tag">تقليل السيلوليت</span><span class="service-tag">نحت الجسم</span><span class="service-tag">شد الجلد</span></td></tr>
+                    <tr><td>7</td><td><strong>جهاز الميزوثيرابي EZ Injector</strong></td><td><span class="service-tag">ميزوثيرابي</span><span class="service-tag">حقن ترطيب الجلد</span><span class="service-tag">علاج تساقط الشعر</span></td></tr>
+                    <tr><td>8</td><td><strong>وحدة PPC لإذابة الدهون</strong></td><td><span class="service-tag">حقن إذابة الدهون</span><span class="service-tag">تصريف الجسم</span><span class="service-tag">دعم ما بعد الشفط</span></td></tr>
+                    <tr><td>9</td><td><strong>كابينة الضوء العلاجي Waldmann</strong></td><td><span class="service-tag">علاج الصدفية</span><span class="service-tag">علاج البهاق</span><span class="service-tag">جلسات UV كامل الجسم</span></td></tr>
+                    <tr><td>10</td><td><strong>جهاز Kernel KN-4000</strong></td><td><span class="service-tag">علاج موضعي بالأشعة</span><span class="service-tag">جلسات جلدية مستهدفة</span></td></tr>
+                    <tr><td>11</td><td><strong>Z Wave نبضات شعاعية</strong></td><td><span class="service-tag">علاج علامات التمدد</span><span class="service-tag">نبضات شعاعية علاجية</span></td></tr>
+                </tbody>
+            </table>
+            <div class="note-ar" style="margin-top:14px;">&#128176; <strong>أولوية الحملة:</strong> البدء بالإعلان عن إزالة الشعر بالليزر، هيدرافيشيال، وتجميد الدهون — الأعلى طلبًا والأسرع في تحويل الحجز إلى إيراد.</div>
+        </div>
+        <div class="team-section">
+            <div class="team-section-title">Team Notes</div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-bakr">B</span> Bakr</div>
+                <textarea class="member-textarea" id="p5-bakr" placeholder="Bakr's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','bakr','Bakr')">Submit</button><span class="status-msg" id="status-p5-bakr"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-hadeer">H</span> Hadeer</div>
+                <textarea class="member-textarea" id="p5-hadeer" placeholder="Hadeer's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','hadeer','Hadeer')">Submit</button><span class="status-msg" id="status-p5-hadeer"></span></div>
+            </div>
+            <div class="team-member">
+                <div class="member-label"><span class="member-badge badge-asmaa">A</span> Asmaa</div>
+                <textarea class="member-textarea" id="p5-asmaa" placeholder="Asmaa's notes, ideas or feedback on this project..."></textarea>
+                <div class="submit-row"><button class="submit-btn" onclick="submitNote('p5','asmaa','Asmaa')">Submit</button><span class="status-msg" id="status-p5-asmaa"></span></div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .container -->
+
+<script>
+    const SHEET_URL = "https://script.google.com/macros/s/AKfycbzPVcE1TKSQslCmaehJN3918z6cLaXw17IKV9SPEu0nXqF4CzoiT0Hg0ZcStFut41ML/exec";
+
+    const PROJECT_NAMES = {
+        p1: "Triple Zero Campaign (ValU)",
+        p2: "Beauty & Dental Voucher (Top Care)",
+        p3: "90-Minute Silent Video Loop",
+        p4: "WE Employees Offer",
+        p5: "Aesthetic Machines Campaign"
+    };
+
+    async function submitNote(projectId, member, memberName) {
+        const textarea = document.getElementById(projectId + '-' + member);
+        const statusEl = document.getElementById('status-' + projectId + '-' + member);
+        const btn      = textarea.closest('.team-member').querySelector('.submit-btn');
+        const text     = textarea.value.trim();
+
+        if (!text) {
+            statusEl.textContent = "Please write something first.";
+            statusEl.className = "status-msg error";
+            return;
+        }
+
+        btn.disabled = true;
+        statusEl.textContent = "Sending...";
+        statusEl.className = "status-msg";
+
+        const payload = {
+            project:   PROJECT_NAMES[projectId],
+            projectId: projectId,
+            member:    memberName,
+            note:      text,
+            timestamp: new Date().toLocaleString("en-GB")
+        };
+
+        try {
+            await fetch(SHEET_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            statusEl.textContent = "Submitted successfully!";
+            statusEl.className = "status-msg success";
+            textarea.value = "";
+        } catch (err) {
+            statusEl.textContent = "Failed to send. Please try again.";
+            statusEl.className = "status-msg error";
+        } finally {
+            btn.disabled = false;
+        }
+    }
+
+    function toggleLang() {
+        const en = document.querySelectorAll('.lang-en');
+        const ar = document.querySelectorAll('.lang-ar');
+        const isArVisible = ar[0].style.display === 'block';
+        if (isArVisible) {
+            en.forEach(el => el.style.display = 'block');
+            ar.forEach(el => el.style.display = 'none');
+        } else {
+            en.forEach(el => el.style.display = 'none');
+            ar.forEach(el => el.style.display = 'block');
+        }
+    }
+</script>
+</body>
+</html>";
+
+    const PROJECT_NAMES = {
+        p1: "Triple Zero Campaign (ValU)",
+        p2: "Beauty & Dental Voucher (Top Care)",
+        p3: "90-Minute Silent Video Loop",
+        p4: "WE Employees Offer",
+        p5: "Aesthetic Machines Campaign"
+    };
+
+    async function submitNote(projectId, member, memberName) {
+        const textarea = document.getElementById(projectId + '-' + member);
+        const statusEl = document.getElementById('status-' + projectId + '-' + member);
+        const btn      = textarea.closest('.team-member').querySelector('.submit-btn');
+        const text     = textarea.value.trim();
+
+        if (!text) {
+            statusEl.textContent = "Please write something first.";
+            statusEl.className = "status-msg error";
+            return;
+        }
+
+        btn.disabled = true;
+        statusEl.textContent = "Sending...";
+        statusEl.className = "status-msg";
+
+        const payload = {
+            project:   PROJECT_NAMES[projectId],
+            projectId: projectId,
+            member:    memberName,
+            note:      text,
+            timestamp: new Date().toLocaleString("en-GB")
+        };
+
+        try {
+            await fetch(SHEET_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            statusEl.textContent = "Submitted successfully!";
+            statusEl.className = "status-msg success";
+            textarea.value = "";
+        } catch (err) {
+            statusEl.textContent = "Failed to send. Please try again.";
+            statusEl.className = "status-msg error";
+        } finally {
+            btn.disabled = false;
+        }
+    }
+
+    function toggleLang() {
+        const en = document.querySelectorAll('.lang-en');
+        const ar = document.querySelectorAll('.lang-ar');
+        const isArVisible = ar[0].style.display === 'block';
+        if (isArVisible) {
+            en.forEach(el => el.style.display = 'block');
+            ar.forEach(el => el.style.display = 'none');
+        } else {
+            en.forEach(el => el.style.display = 'none');
+            ar.forEach(el => el.style.display = 'block');
+        }
+    }
+</script>
+</body>
+</html>
