@@ -30,6 +30,21 @@
         .note { background: #fff8f0; border-left: 4px solid var(--gold); padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
         .note-ar { background: #fff8f0; border-right: 4px solid var(--gold); border-left: none; padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.92em; }
 
+        /* ── Ad Image Gallery ── */
+        .ad-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+        .ad-gallery img { width: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.12); transition: transform 0.2s; cursor: pointer; }
+        .ad-gallery img:hover { transform: scale(1.02); }
+        .ad-gallery-label { font-size: 0.8em; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 18px; margin-bottom: 8px; }
+
+        /* ── WE Post Cards ── */
+        .we-images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+        .we-images img { width: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 14px rgba(79,45,127,0.18); }
+        .we-posts { margin-top: 20px; display: flex; flex-direction: column; gap: 14px; }
+        .we-post-card { background: #f5f0ff; border-right: 4px solid var(--we); border-radius: 8px; padding: 14px 16px; direction: rtl; text-align: right; }
+        .we-post-card .post-num { font-size: 0.75em; font-weight: bold; color: var(--we); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+        .we-post-card p { margin: 0; line-height: 1.9; font-size: 0.95em; color: #2d1a50; }
+        .we-post-card .phone { display: inline-block; direction: ltr; unicode-bidi: embed; font-weight: bold; color: var(--we); }
+
         /* Team Feedback */
         .team-section { margin-top: 22px; border-top: 2px dashed #e0e0e0; padding-top: 18px; }
         .team-section-title { font-size: 0.85em; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
@@ -67,7 +82,7 @@
         <button class="toggle-btn" onclick="toggleLang()">AR / EN</button>
     </div>
 
-    <!-- PROJECT 1 -->
+    <!-- PROJECT 1 — ValU -->
     <div class="project-box" style="border-right: 5px solid var(--valu);">
         <div class="label" style="background: var(--valu);">ValU Partnership</div>
         <div class="lang-en">
@@ -81,6 +96,13 @@
                 <li><strong>Campaign Rule:</strong> Cannot be combined with any other discounts or price-reduction promotions.</li>
             </ul>
             <div class="note">&#9201; <strong>Duration:</strong> Positioned as a "limited time" offer spanning 3 months.</div>
+            <div class="ad-gallery-label">📸 Campaign Ads</div>
+            <div class="ad-gallery">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391243/image_c0d6f021-9c17-4340-b7d4-1f7639bf0455_pwzxpv.png" alt="ValU Ad 1" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391262/image_4a6be123-ffe7-437b-8a5a-c92fbbe81b76_v7hqq2.png" alt="ValU Ad 2" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391268/image_93ef3c08-5e40-4776-a815-777646a193bb_yoq9bg.png" alt="ValU Ad 3" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391271/image_1b6abed3-fccb-4b2a-b7a7-c0a8438f93ae_w9gcne.png" alt="ValU Ad 4" loading="lazy">
+            </div>
         </div>
         <div class="lang-ar">
             <h2>1. حملة Triple Zero (شراكة فاليو)</h2>
@@ -93,6 +115,13 @@
                 <li><strong>شرط الحملة:</strong> لا يمكن دمج هذا العرض مع أي خصومات أو تخفيضات أخرى.</li>
             </ul>
             <div class="note-ar">&#9201; <strong>المدة:</strong> عرض لفترة محدودة لمدة 3 أشهر.</div>
+            <div class="ad-gallery-label" style="direction:rtl;text-align:right;">📸 إعلانات الحملة</div>
+            <div class="ad-gallery">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391243/image_c0d6f021-9c17-4340-b7d4-1f7639bf0455_pwzxpv.png" alt="إعلان فاليو 1" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391262/image_4a6be123-ffe7-437b-8a5a-c92fbbe81b76_v7hqq2.png" alt="إعلان فاليو 2" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391268/image_93ef3c08-5e40-4776-a815-777646a193bb_yoq9bg.png" alt="إعلان فاليو 3" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391271/image_1b6abed3-fccb-4b2a-b7a7-c0a8438f93ae_w9gcne.png" alt="إعلان فاليو 4" loading="lazy">
+            </div>
         </div>
         <div class="team-section">
             <div class="team-section-title">Team Notes</div>
@@ -198,27 +227,84 @@
         </div>
     </div>
 
-    <!-- PROJECT 4 -->
+    <!-- PROJECT 4 — WE (UPDATED) -->
     <div class="project-box" style="border-right: 5px solid var(--we);">
         <div class="label" style="background: var(--we);">WE Offer</div>
+
+        <!-- EN version -->
         <div class="lang-en">
             <h2>4. Telecom Egypt (WE) Employees Offer</h2>
-            <p class="section-intro">A special dental offer exclusively for employees of Telecom Egypt (WE), effective from Saturday, April 4, 2026.</p>
+            <p class="section-intro">
+                A special medical insurance offer exclusively for Telecom Egypt (WE) employees at Donia Al Oyoun Hospital,
+                covering ophthalmology consultations, radiology, and surgical procedures at preferential rates.
+            </p>
             <ul>
-                <li><strong>Dental Consultation:</strong> Fixed at 200 EGP for all employees.</li>
-                <li><strong>Other Procedures:</strong> 30% discount for children and 20% discount for adults.</li>
-                <li><strong>Validity:</strong> The offer is active until further notice.</li>
+                <li><strong>Coverage:</strong> Consultations, radiology, and all ophthalmic surgical procedures.</li>
+                <li><strong>Eligibility:</strong> All active Telecom Egypt (WE) employees enrolled in the company medical insurance scheme.</li>
+                <li><strong>Booking:</strong> Call <strong>16456</strong> to reserve an appointment.</li>
+                <li><strong>Validity:</strong> Active until further notice.</li>
             </ul>
+            <div class="ad-gallery-label">📸 Campaign Posts</div>
+            <div class="we-images">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391842/post1_we_final_lprx9o.jpg" alt="WE Post 1" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391842/post2_we_final_iz9b7d.jpg" alt="WE Post 2" loading="lazy">
+            </div>
         </div>
+
+        <!-- AR version -->
         <div class="lang-ar">
-            <h2>4. عرض موظفي المصرية للاتصالات (WE)</h2>
-            <p class="section-intro">ابتداءً من يوم السبت 4-4-2026، عرض خاص على خدمات الأسنان للسادة العاملين بشركة المصرية للاتصالات.</p>
-            <ul>
-                <li><strong>الكشف:</strong> 200 جنيه لجميع الموظفين.</li>
-                <li><strong>الإجراءات الأخرى:</strong> خصم 30% للأطفال و 20% للراشدين.</li>
-                <li><strong>السريان:</strong> العرض ساري حتى إشعار آخر.</li>
-            </ul>
+            <h2>4. عرض موظفي شركة المصرية للاتصالات (WE)</h2>
+            <p class="section-intro" style="direction:rtl;text-align:right;">
+                تعاقد خاص مع شركة المصرية للاتصالات يتيح لجميع موظفيها الحصول على خدمات طب العيون بأسعار مميزة وحصرية في مستشفى دنيا العيون.
+            </p>
+
+            <!-- Post cards -->
+            <div class="we-posts">
+
+                <div class="we-post-card">
+                    <div class="post-num">البوست الأول</div>
+                    <p>
+                        إلى موظفي شركة المصرية للاتصالات <span style="direction:ltr;unicode-bidi:embed;">(WE)</span>،
+                        <br><br>
+                        تعلن مستشفى دنيا العيون عن تعاقدها مع شركة المصرية للاتصالات، لتقديم خدمات طبية متميزة بأسعار خاصة وحصرية لكم، وذلك في إطار التأمين الطبي الخاص بكم.
+                        <br><br>
+                        اتصل الآن للحجز على رقم <span class="phone">16456</span>.
+                    </p>
+                </div>
+
+                <div class="we-post-card">
+                    <div class="post-num">البوست الثاني</div>
+                    <p>
+                        إذا كنت من موظفي شركة المصرية للاتصالات <span style="direction:ltr;unicode-bidi:embed;">(WE)</span>، استفد بخدمات العيون في مستشفى دنيا العيون.
+                        <br><br>
+                        لديك الآن تأمين طبي متاح في مستشفى دنيا العيون، للاستفادة بأسعار مميزة وحصرية على الكشف والأشعة والعمليات في جميع تخصصات العيون.
+                        <br><br>
+                        اتصل الآن للحجز على رقم <span class="phone">16456</span>.
+                    </p>
+                </div>
+
+                <div class="we-post-card">
+                    <div class="post-num">البوست الثالث</div>
+                    <p>
+                        موظفو شركة المصرية للاتصالات <span style="direction:ltr;unicode-bidi:embed;">(WE)</span> .. امتيازاتكم أصبحت أقرب!
+                        <br><br>
+                        استفد الآن من التأمين الطبي الخاص بك في مستشفى دنيا العيون، واحصل على أسعار مميزة وحصرية على:
+                        <br>
+                        (الكشف – الأشعة – العمليات) في جميع تخصصات العيون.
+                        <br><br>
+                        اتصل الآن للحجز على رقم <span class="phone">16456</span>.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="ad-gallery-label" style="direction:rtl;text-align:right;margin-top:20px;">📸 البوستات الإعلانية</div>
+            <div class="we-images">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391842/post1_we_final_lprx9o.jpg" alt="بوست WE الأول" loading="lazy">
+                <img src="https://res.cloudinary.com/drzjgiguw/image/upload/v1775391842/post2_we_final_iz9b7d.jpg" alt="بوست WE الثاني" loading="lazy">
+            </div>
         </div>
+
         <div class="team-section">
             <div class="team-section-title">Team Notes</div>
             <div class="team-member">
@@ -337,7 +423,6 @@
         statusEl.textContent = "Sending...";
         statusEl.className = "status-msg";
 
-        // Create query parameters for the Apps Script doGet/doPost with URL parameters
         const params = new URLSearchParams({
             project:   PROJECT_NAMES[projectId],
             projectId: projectId,
@@ -346,7 +431,6 @@
             timestamp: new Date().toLocaleString("en-GB")
         });
 
-        // Using fetch with no-cors and URL parameters to match e.parameter in Apps Script
         fetch(`${SHEET_URL}?${params.toString()}`, {
             method: "POST",
             mode: "no-cors"
@@ -356,7 +440,7 @@
             statusEl.className = "status-msg success";
             textarea.value = "";
         })
-        .catch((err) => {
+        .catch(() => {
             statusEl.textContent = "Failed to send. Please try again.";
             statusEl.className = "status-msg error";
         })
